@@ -1,3 +1,4 @@
+import 'package:aztekapp/presentation/screens/Home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title:  "Almacen Aztek",
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.tealAccent,
+          foregroundColor: Colors.white,
+          elevation: 8,
+        ),
+        
+      ),
+      home: HomeScreen(),
+    );
   }
 }
