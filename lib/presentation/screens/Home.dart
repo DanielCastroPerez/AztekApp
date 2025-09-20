@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text("Almacen Aztek", style: TextStyle(fontSize: 8.0)),
+        title: Text("Almacen Aztek", style: TextStyle(fontSize: 50.0)),
         centerTitle: true, // despues agregar las extencion de googlefont
       ),
       body: navigationScreen[_selectedIndex],
