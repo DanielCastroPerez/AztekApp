@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 class AlmacenRemoteDatasource {
   static Map<String, dynamic>? _data;
+
   Future<void> loadData() async {
     if (_data == null) {
       final String jsonString = await rootBundle.loadString(
@@ -20,6 +21,7 @@ class AlmacenRemoteDatasource {
   List<dynamic> getItems(){
     return _data?['articulos'] ?? [];
   }
+  
   List<dynamic> getMovements(){
     return _data?["movimientos"]?? [];
   }
