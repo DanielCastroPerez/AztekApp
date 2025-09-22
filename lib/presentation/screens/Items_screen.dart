@@ -14,7 +14,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
   List<dynamic> _items = [];
 
   @override 
-  void iniState(){
+  void initState(){
     super.initState();
     _liadData();
   }
@@ -43,7 +43,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
           elevation: 4,
           child: ListTile(
             leading: Icon(Icons.build,color: Colors.blue),
-            title: Text("Tipo :${item["tipo"]} Estado: ${item["estado"]}\n Provedor: ${["proveedor"]} Precio: ${item["precio"]}"),
+            title: Text("Tipo: ${item["tipo"]} Estado: ${item["estado"]}\n Provedor: ${item["proveedor"]} Precio: ${item["precio"]}"),
           
           ),
         );

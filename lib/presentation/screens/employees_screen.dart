@@ -13,8 +13,9 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
   final AlmacenRemoteDatasource _datasource = AlmacenRemoteDatasource();
   List<dynamic> _employees  = [];
 
-  // Esteo es para cuando arranca la app es lo primero que hace
-  void iniState(){
+  // Esto es para cuando arranca la app es lo primero que hace
+  @override
+  void initState(){
     super.initState();
     _loadinData(); // mi metodo al que llamara
   }

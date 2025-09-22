@@ -11,7 +11,7 @@ class MovementsScreen extends StatefulWidget {
 class _MovementsScreenState extends State<MovementsScreen> {
   final AlmacenRemoteDatasource _datasource = AlmacenRemoteDatasource();
 
-  List<dynamic> _movements = []; // porque no puedo ponerle final?
+  List<dynamic> _movements = []; 
   List<dynamic> _employees = [];
   List<dynamic> _items = [];
 
@@ -35,17 +35,17 @@ class _MovementsScreenState extends State<MovementsScreen> {
   String _getItemName(int idArticulo) {
     final item = _items.firstWhere(
       (i) => i["id"] == idArticulo,
-      orElse: () => null, //??
+      orElse: () => [], 
     );
-    return item != null ? item["nombre"] : "Desconocido"; //??
+    return item != null ? item["nombre"] : "Desconocido"; 
   }
 
   String __getEmployeeName(int idEmployee) {
     final emp = _employees.firstWhere(
       (e) => e["id"] == idEmployee,
-      orElse: () => null,
+      orElse: () => [],
     );
-    return emp != null ? emp["nombre"] : "Desconocido"; //??
+    return emp != null ? emp["nombre"] : "Desconocido"; 
   }
 
   @override
