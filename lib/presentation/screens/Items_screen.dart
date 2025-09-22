@@ -14,7 +14,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
   List<dynamic> _items = [];
 
   @override 
-  void iniState(){
+  void initState(){
     super.initState();
     _liadData();
   }
