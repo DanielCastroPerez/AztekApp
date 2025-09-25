@@ -12,9 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   int _selectedIndex = 0;
-  
+
   void _navigateBottomBar(int index) {
     setState(() {
       _selectedIndex = index;

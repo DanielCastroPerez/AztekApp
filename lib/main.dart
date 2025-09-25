@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title:  "Almacen Aztek",
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.tealAccent,
+          backgroundColor:  Color(0xFF00BCD4),
           foregroundColor: Colors.white,
           elevation: 8,
         ),
