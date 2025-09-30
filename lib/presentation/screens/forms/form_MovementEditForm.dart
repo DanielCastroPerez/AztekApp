@@ -31,61 +31,58 @@ class _PageMovementeditformState extends State<PageMovementeditform> {
       appBar: AppBar(title: Text("Editar Movimiento"), centerTitle: true),
       body: Padding(
         padding: EdgeInsets.all(15.0),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(13.0)),
-          child: Column(
-            children: [
-              TextField(
-                controller: type,
-                decoration: InputDecoration(
-                  labelText: "Tipo",
-                  hintText: widget.movement["tipo"],
-                  border: OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.clear),
-                  ),
+        child: Column(
+          children: [
+            TextField(
+              controller: type,
+              decoration: InputDecoration(
+                labelText: "Tipo",
+                hintText: widget.movement["tipo"],
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.clear),
                 ),
               ),
-
-              SizedBox(height: 17.0),
-
-              TextField(
-                controller: reason,
-                decoration: InputDecoration(
-                  labelText: "Razon",
-                  hintText: widget.movement["razon"],
-                  border: OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.clear),
-                  ),
+            ),
+        
+            SizedBox(height: 17.0),
+        
+            TextField(
+              controller: reason,
+              decoration: InputDecoration(
+                labelText: "Razon",
+                hintText: widget.movement["razon"],
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.clear),
                 ),
               ),
-
-              SizedBox(height: 17.0),
-
-              TextField(
-                controller: date,
-                decoration: InputDecoration(
-                  labelText: "Fecha",
-                  hintText: widget.movement["fecha"], // poner tipo date 
-                  border: OutlineInputBorder(),
-                  prefixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.date_range_outlined),
-                  ),
+            ),
+        
+            SizedBox(height: 17.0),
+        
+            TextField(
+              controller: date,
+              decoration: InputDecoration(
+                labelText: "Fecha",
+                hintText: widget.movement["fecha"], // poner tipo date 
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                prefixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.date_range_outlined),
                 ),
               ),
-
-            ],
-          ),
+            ),
+        
+          ],
         ),
       ),
     );

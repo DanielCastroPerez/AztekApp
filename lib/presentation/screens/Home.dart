@@ -30,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
         title: Text("Almacen Aztek", style: TextStyle(fontSize: 24.0)),
         centerTitle: true, // despues agregar las extencion de googlefont
       ),

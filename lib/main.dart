@@ -1,4 +1,5 @@
 import 'package:aztekapp/presentation/screens/Home.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,26 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
           elevation: 8,
         ),
-        
+        textTheme: GoogleFonts.poppinsTextTheme(
+          TextTheme(
+            // displayLarge: TextStyle(// Para los appBar 
+            //   color: Colors.black87,
+            //   fontWeight: FontWeight.bold,
+            //   fontSize: 60.0,
+            // ),
+            bodyLarge: TextStyle( // Para los titles de ListTilte
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+              fontSize: 19.0,
+            ),
+            bodyMedium: TextStyle( // para el resto de la lista
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+              fontSize: 15.0
+            )
+          )
+        ),
+
       ),
       home: HomeScreen(),
     );
