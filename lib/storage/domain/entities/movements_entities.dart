@@ -1,5 +1,5 @@
-import 'package:aztekapp/domain/entities/employees_entities.dart';
-import 'package:aztekapp/domain/entities/items_entities.dart';
+import 'package:aztekapp/home/domain/entities/employees_entities.dart';
+import 'package:aztekapp/storage/domain/entities/items_entities.dart';
 
 class MovementsEntities {
   final int id;
