@@ -18,17 +18,19 @@ class ScreenBottomnavigationbar extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
+        
+        backgroundColor: Color(0xFFB2EBF2),
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.inventory_2_outlined),
+            icon: Icon(Icons.inventory_2_outlined,color: Colors.black87,),
             label: "Items",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.people_alt_outlined),
+            icon: Icon(Icons.people_alt_outlined,color: Colors.black87,),
             label: "Employees",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_shipping_outlined),
+            icon: Icon(Icons.local_shipping_outlined,color: Colors.black87,),
             label: "Movements",
           ),
         ],

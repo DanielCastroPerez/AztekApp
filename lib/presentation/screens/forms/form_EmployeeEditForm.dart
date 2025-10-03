@@ -31,77 +31,74 @@ class _PageEmployeEditformState extends State<PageEmployeEditform> {
       appBar: AppBar(title: Text("Editar Empleado"), centerTitle: true),
       body: Padding(
         padding: EdgeInsets.all(15.0),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(13.0)),
-          child: Column(
-            children: [
-              TextField(
-                controller: name,
-                decoration: InputDecoration(
-                  labelText: "Nombre del empleado",
-                  hintText: widget.employ["nombre"],
-                  border: OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.clear),
-                  ),
+        child: Column(
+          children: [
+            TextField(
+              controller: name,
+              decoration: InputDecoration(
+                labelText: "Nombre del empleado",
+                hintText: widget.employ["nombre"],
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.clear),
                 ),
               ),
-
-              SizedBox(height: 17.0),
-
-              TextField(
-                controller: lastName,
-                decoration: InputDecoration(
-                  labelText: "Apellido",
-                  hintText: widget.employ["apellido"],
-                  border: OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.clear),
-                  ),
+            ),
+        
+            SizedBox(height: 17.0),
+        //Pedientes: que la barra tenga mas espacio para llenar y darle funciones a los iconos, me imagino que es cambiarlos iconButon
+            TextField(
+              controller: lastName,
+              decoration: InputDecoration(
+                labelText: "Apellido",
+                hintText: widget.employ["apellido"],
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.clear),
                 ),
               ),
-
-              SizedBox(height: 17.0),
-
-              TextField(
-                controller: email,
-                decoration: InputDecoration(
-                  labelText: "Correo electronico",
-                  hintText: widget.employ["correo_electronico"],
-                  border: OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.clear),
-                  ),
+            ),
+        
+            SizedBox(height: 17.0),
+        
+            TextField(
+              controller: email,
+              decoration: InputDecoration(
+                labelText: "Correo electronico",
+                hintText: widget.employ["correo_electronico"],
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.clear),
                 ),
               ),
-
-              SizedBox(height: 17.0),
-
-              TextField(
-                controller: rol,
-                decoration: InputDecoration(
-                  labelText: "Rol del empleado",
-                  hintText: widget.employ["rol"],
-                  border: OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      //
-                    },
-                    icon: Icon(Icons.clear),
-                  ),
+            ),
+        
+            SizedBox(height: 17.0),
+        
+            TextField(
+              controller: rol,
+              decoration: InputDecoration(
+                labelText: "Rol del empleado",
+                hintText: widget.employ["rol"],
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    //
+                  },
+                  icon: Icon(Icons.clear),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
