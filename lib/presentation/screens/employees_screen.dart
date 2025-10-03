@@ -55,32 +55,120 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
                     subtitle: Text(
                       "${empl["correo_electronico"]}\nRol: ${empl["rol"]}",
                     ),
-                    trailing: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        IconButton(
-                          icon: Icon(Icons.edit, color: Colors.orange),
-                          tooltip: "Editar este elemento",
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    PageEmployeEditform(employ: empl),
+                    trailing: IconButton(
+                      onPressed: () {
+                        showModalBottomSheet(
+                          //Pendientes: todo esto meterlo en una clase
+                          backgroundColor: Colors.lightBlue[100],
+                          context: context,
+                          builder: (context) {
+                            return SizedBox(
+                              width: double.infinity,
+                              height: 500,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsGeometry.all(8.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.people,
+                                            color: Colors.purple,
+                                          ),
+                                          SizedBox(width: 8.0),
+                                          Text("Datos de el empleado "),
+                                        ],
+                                      ),
+                                    ),
+
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.people,
+                                            color: Colors.green,
+                                          ),
+                                          SizedBox(width: 8.0),
+                                          Text(
+                                            "Nombre : ${empl["nombre"]} ${empl["apellido"]}",
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsGeometry.all(8.0),
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.email, color: Colors.red),
+                                          SizedBox(width: 8.0),
+                                          Text(
+                                            "Correo: ${empl["correo_electronico"]}",
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.work, color: Colors.brown),
+                                          SizedBox(width: 8.0),
+                                          Text("Rol: ${empl["rol"]}"),
+                                        ],
+                                      ),
+                                    ),
+
+                                    Padding(
+                                      padding: EdgeInsetsGeometry.all(8),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          IconButton(
+                                            icon: Icon(
+                                              Icons.edit,
+                                              color: Colors.orange,
+                                            ),iconSize: 30,
+                                            tooltip: "Editar este elemento",
+                                            onPressed: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      PageEmployeEditform(
+                                                        employ: empl,
+                                                      ),
+                                                ),
+                                              );
+                                              debugPrint("Editando Empl $empl");
+                                            },
+                                          ),
+                                          IconButton(
+                                            icon: Icon(
+                                              Icons.delete,
+                                              color: Colors.red,
+                                            ),iconSize: 30,
+                                            tooltip: "Eliminar este elemento",
+                                            onPressed: () {
+                                              debugPrint("Eliminar item $empl");
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
-                            debugPrint("Editando Empl $empl");
                           },
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.delete, color: Colors.red),
-                          tooltip: "Eliminar este elemento",
-                          onPressed: () {
-                            debugPrint("Eliminar item $empl");
-                          },
-                        ),
-                      ],
+                        );
+                      },
+                      icon: Icon(Icons.keyboard_arrow_right_sharp),
                     ),
                   ),
                 ],
@@ -96,3 +184,32 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
     );
   }
 }
+
+
+// Row(
+//                       mainAxisAlignment: MainAxisAlignment.end,
+//                       mainAxisSize: MainAxisSize.min,
+//                       children: [
+//                         IconButton(
+//                           icon: Icon(Icons.edit, color: Colors.orange),
+//                           tooltip: "Editar este elemento",
+//                           onPressed: () {
+//                             Navigator.push(
+//                               context,
+//                               MaterialPageRoute(
+//                                 builder: (context) =>
+//                                     PageEmployeEditform(employ: empl),
+//                               ),
+//                             );
+//                             debugPrint("Editando Empl $empl");
+//                           },
+//                         ),
+//                         IconButton(
+//                           icon: Icon(Icons.delete, color: Colors.red),
+//                           tooltip: "Eliminar este elemento",
+//                           onPressed: () {
+//                             debugPrint("Eliminar item $empl");
+//                           },
+//                         ),
+//                       ],
+//                     ),
