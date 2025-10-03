@@ -1,0 +1,58 @@
+{
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Carlos Pérez",
+      "apellido": "Molina",
+      "correo_electronico": "carlos@empresa.com",
+      "rol": "administrador"
+    },
+    {
+      "id": 2,
+      "nombre": "Ana López",
+      "apellido": "Salas",
+      "correo_electronico": "ana@empresa.com",
+      "rol": "almacen"
+    }
+  ],
+  "articulos": [
+    {
+      "id": 101,
+      "nombre": "Taladro Bosch",
+      "tipo": "herramienta",
+      "codigo_de_barras": "1234567890123",
+      "proveedor": "Ferretería MX",
+      "precio": 1500.00,
+      "estado": "disponible",
+      "fecha_de_entrada": "2025-09-01"
+    },
+    {
+      "id": 102,
+      "nombre": "Tarjeta Madre ASUS",
+      "tipo": "Dispositivo", 
+      "codigo_de_barras": "9876543210987",
+      "proveedor": "Distribuidora Tech",
+      "precio": 2500.00,
+      "estado": "en_uso",
+      "fecha_de_entrada": "2025-09-05"
+    }
+  ],
+  "movimientos": [
+    {
+      "id": 5001,
+      "id_articulo": 101,
+      "id_empleado": 2,
+      "tipo": "salida",
+      "razon": "reparacion",
+      "fecha": "2025-09-10"
+    },
+    {
+      "id": 5002,
+      "id_articulo": 102,
+      "id_empleado": 2,
+      "tipo": "entrada",
+      "razon": "devuelto",
+      "fecha": "2025-09-12"
+    }
+  ]
+}
